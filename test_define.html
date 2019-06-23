@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>考站定义</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/test_define.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="conatiner">
+    <div class="header-table">
+      <div class='table-item'>
+        <p class='item-main'>
+          <span class="label-name">模板名称
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">考场数
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box' id='testrooom'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">最大学生数量
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+      </div>
+      <div class='table-item'>
+        <p class='item-main'>
+          <span class="label-name">主考官权重(%)
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">考官权重(%)
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box' id='testrooom'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">中控考官权重(%)*
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+      </div>
+      <div class='table-item'>
+        <p class='item-main'>
+          <span class="label-name">考试时隔时间(min)
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">排站策略
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box' id='testrooom'>
+        </p>
+        <p class='item-main'>
+          <span class="label-name">考试类型
+            <i>*</i>
+          </span>
+          <input type="text" class='input-box'>
+        </p>
+      </div>
+      <div class='table-item'>
+        <span class='item-name'>模板描述</span>
+        <input type="text" class='desc-input input-box'>
+      </div>
+    </div>
+    <div class="main">
+      <!-- 结束时间 -->
+      <div class="main-left">
+        <div class="left-header">
+          <p class='date-text'>OSCE日期</p>
+          <div class="save-btn">保存</div>
+        </div>
+        <div class='time-line'>
+          <p class='time-header'>开始时间<i>*</i></p>
+          <input type="text" class='time-box'>
+        </div>
+        <div class='time-line'>
+          <p class='time-header'>中休开始时间<i>*</i></p>
+          <input type="text" class='time-box'>
+        </div>
+        <div class='time-line'>
+          <p class='time-header'>中休息结束时间<i>*</i></p>
+          <input type="text" class='time-box'>
+        </div>
+        <div class='time-line'>
+          <p class='time-header'>结束时间<i>*</i></p>
+          <input type="text" class='time-box'>
+        </div>
+      </div>
+
+      <!-- 考场信息 -->
+      <div class="main-right">
+        <div class='room-main'>
+          <!-- 弹窗 -->
+          <div class="set-modal">
+            <select class="modal-select">
+              <option value="第一次循环半天">第一次循环半天</option>
+              <option value="第一次循环一天">第一次循环一天</option>
+            </select>
+            <select class="modal-select">
+              <option value="最后一次循环半天">最后一次循环半天</option>
+              <option value="最后一次循环一天">最后一次循环一天</option>
+            </select>
+          </div>
+          <div class="room-msg">
+            <div class="room-name" id='room1'>
+              <span class="room-num">考场1</span>
+              <img src="./images/set_btn.png" id="set-btn1" alt="设置" class='set-btn'>
+            </div>
+          </div>
+          <div class="content" id="content">
+            <div class="room-content">
+              <div class="content-main">
+                <div class="content-header">
+                  考站1
+                  <a href="javascript:;" class='delete-btn' onclick="handleDelete()"></a>
+                </div>
+                <div class="content-text">
+                  <div class='text-item'>
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">内科</span>
+                  </div>
+                  <div class='text-item'>
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">技能操作 5min</span>
+                  </div>
+                  <div class='text-item' id='test1-3' style="display: block;" onclick="handleEdit()">
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">101 102</span>
+                  </div>
+                  <!-- 弹层 -->
+                  <!-- <div class='modal'>
+                    <span class='modal-arrow'></span>
+                    <div class="modal-main">
+                      <div class="modal-content">
+                        <select name="select" class="select-main">
+                          <option value="101">101</option>
+                          <option value="102">102</option>
+                          <option value="103">103</option>
+                        </select>
+                        <span class="num-text">并发人数</span>
+                        <input type="text" class='num-input'>
+                        <a href="javascript:;" class="add-item" id="add-item">+</a>
+                        <a href="javascript:;" class='delete-item' id="delete-item">-</a>
+                      </div>
+                      <div class="control-area">
+                        <a href="javascript:;" class="sure-btn" id="sure-btn">确认</a>
+                        <a href="javascript:;" class='close-btn' id="close-btn">关闭</a>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- <div class="room-content">
+              <div class="content-main"></div>
+            </div> -->
+            <div class="add-box" id="add-main" onclick="handleAdd()">
+              <div class="add-main">
+                <img src="./images/add_btn.png" alt="add icon" class='add-btn'>
+                添加考站
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-line"></div>
+        </div>
+        <!-- 考场2 -->
+        <div class='room-main room2'>
+          <div class="room-msg">
+            <div class="room-name" id='room1'>
+              <span class="room-num">考场2</span>
+              <img src="./images/set_btn.png" alt="设置" class='set-btn'>
+            </div>
+          </div>
+          <div class="content" id="content">
+            <div class="room-content">
+              <div class="content-main">
+                <div class="content-header">
+                  考站1
+                  <a href="javascript:;" class='delete-btn' onclick="handleDelete()"></a>
+                </div>
+                <div class="content-text">
+                  <div class='text-item'>
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">内科</span>
+                  </div>
+                  <div class='text-item'>
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">技能操作 5min</span>
+                  </div>
+                  <div class='text-item' id='test1-3' style="display: block;" onclick="handleEdit()">
+                    <img src="./images/edit_btn.png" alt="编辑" class="edit-btn">
+                    <span class="item-desc">101 102</span>
+                  </div>
+                  <!-- 弹层 -->
+                  <!-- <div class='modal'>
+                    <span class='modal-arrow'></span>
+                    <div class="modal-main">
+                      <div class="modal-content">
+                        <select name="select" class="select-main">
+                          <option value="101">101</option>
+                          <option value="102">102</option>
+                          <option value="103">103</option>
+                        </select>
+                        <span class="num-text">并发人数</span>
+                        <input type="text" class='num-input'>
+                        <a href="javascript:;" class="add-item" id="add-item">+</a>
+                        <a href="javascript:;" class='delete-item' id="delete-item">-</a>
+                      </div>
+                      <div class="control-area">
+                        <a href="javascript:;" class="sure-btn" id="sure-btn">确认</a>
+                        <a href="javascript:;" class='close-btn' id="close-btn">关闭</a>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- <div class="room-content">
+              <div class="content-main"></div>
+            </div> -->
+            <div class="add-box" id="add-main" onclick="handleAdd()">
+              <div class="add-main">
+                <img src="./images/add_btn.png" alt="add icon" class='add-btn'>
+                添加考站
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      $('#test1-3').click(function() {
+        $('.modal').toggle()
+      })
+
+      $('#close-btn').click(function() {
+        $('.modal').hide()
+      })
+
+      $('#sure-btn').click(function() {
+        alert('确认按钮')
+        $('.modal').hide()
+      })
+
+      var modalConetnt = $('.modal-content')[0]
+      var controlArea = $('.control-area')[0]
+      $('#add-item').click(function() {
+        var cloneNode = $('.modal-content')[0].cloneNode(true)
+      })
+
+      $('#delete-item').click(function() {
+        console.log('删除')
+      })
+
+      $("#set-btn1").click(function() {
+        $(".set-modal").toggle()
+      })
+    }()
+
+    function handleEdit() {
+      alert('编辑')
+    }
+
+    function handleSet() {
+      // alert("设置")
+      
+    }
+
+    function handleDelete() {
+      alert('删除')
+    }
+
+    function handleAdd() {
+      var contentArea = $("#content")
+      $(".room-content").clone(true).insertBefore($("#add-main"))
+    }
+  </script>
+</body>
+</html>

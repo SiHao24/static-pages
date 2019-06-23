@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>考站定义</title>
+      <link rel="stylesheet" href="./css/reset.css">
+      <link rel="stylesheet" href="./css/preview.css">
+      <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <div class="wrapper">
+        <table cellpadding="10000" style="width: 100%;"> 
+          <thead>
+            <tr>
+              <th></th>
+              <th>第一天</th>
+              <th>第二天</th>
+              <th>第三天</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>上</p><p style="margin-top: 20px;">午</p>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                  <div class='header'>考场1</div>
+                  <div class='test-container'>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container">
+                          <div class="content-item" id="content1">
+                            <img class='edit-btn' src="./images/edit_btn.png" alt="编辑">
+                            <p class="item-text" onclick="showModal()">期末外科理论考试A卷</p>
+                          </div>
+                          <div class="modal">
+                            <div class="modal-content">
+                              <select class="select">
+                                <option value="101">101</option>
+                                <option value="102">102</option>
+                                <option value="103">103</option>
+                              </select>
+                              <a href="javascript:;" class="btn sure-btn">确认</a>
+                              <a href="javascript:;" class="btn cancel-btn" id="cancel">取消</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container">
+                            <div class="content-item">
+                              <img class='edit-btn' src="./images/edit_btn.png" alt="编辑">
+                              <p class="item-text" onclick="showModal()">期末外科理论考试A卷</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                    <div class='header'>考场1</div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                      <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                </div>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                    <div class='header'>考场1</div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                      <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>下</p>
+                <p style="margin-top: 20px;">午</p>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                  <div class='header'>考场1</div>
+                  <div class="main-content">
+                    <p class="header-text">考站1-1 内科 理论试题</p>
+                    <div class="content">
+                      <div class="nav">
+                        <a href="javascript:;" class='nav-item'>101</a>
+                        <a href="javascript:;" class='nav-item'>102</a>
+                      </div>
+                      <div class="content-container"></div>
+                    </div>
+                  </div>
+                  <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <script src='./js/preview.js'></script>
+  </body>
+</html>
