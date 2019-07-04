@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>分配SP</title>
+      <link rel="stylesheet" href="./css/reset.css">
+      <link rel="stylesheet" href="./css/preview.css">
+      <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <div class="wrapper">
+        <table cellpadding="10000" style="width: 100%;"> 
+          <thead>
+            <tr>
+              <th></th>
+              <th>第一天</th>
+              <th>第二天</th>
+              <th>第三天</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-line">
+                <p>上</p><p style="margin-top: 20px;">午</p>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                  <div class='header'>考场1</div>
+                  <div class="main-content">
+                    <p class="header-text">考站1-1 内科 理论试题</p>
+                    <div class="content">
+                      <div class="nav">
+                        <a href="javascript:;" class='nav-item' id="tab1">101</a>
+                        <a href="javascript:;" class='nav-item' id="tab2">102</a>
+                      </div>
+                      <div class="content-container">
+                        <div class="content-item" id="tab1-main">
+                          <div class="tab1-content">
+                            <p class='item-main'>
+                              <span class="item-msg">四个汉字</span>
+                              <span class="item-msg">09:40</span>
+                              <span class="item-msg">90:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S2</span>
+                              <span class="item-msg">09:50</span>
+                              <span class="item-msg">10:00</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S3</span>
+                              <span class="item-msg">10:05</span>
+                              <span class="item-msg">10:15</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S4</span>
+                              <span class="item-msg">10:20</span>
+                              <span class="item-msg">10:30</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S5</span>
+                              <span class="item-msg">10:35</span>
+                              <span class="item-msg">10:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S6</span>
+                              <span class="item-msg">10:50</span>
+                              <span class="item-msg">10:55</span>
+                            </p>
+                          </div>
+                          <div class="main-right">
+                            <p class="right-item" onclick="handleEdit()">
+                              <img class="edit-btn edit" src="./images/edit_btn.png" alt="编辑">
+                              <span class="">SP</span>
+                            </p>
+                            <p class="right-item">四个汉字</p>
+                          </div>
+                        </div>
+                        <div class="content-item" id="tab2-main">
+                          <div class="tab2-content">
+                            <p class='item-main'>
+                              <span class="item-msg">S7</span>
+                              <span class="item-msg">09:40</span>
+                              <span class="item-msg">09:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S8</span>
+                              <span class="item-msg">90:50</span>
+                              <span class="item-msg">10:00</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S9</span>
+                              <span class="item-msg">10:05</span>
+                              <span class="item-msg">10:15</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S10</span>
+                              <span class="item-msg">10:20</span>
+                              <span class="item-msg">10:30</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S11</span>
+                              <span class="item-msg">10:35</span>
+                              <span class="item-msg">10:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S12</span>
+                              <span class="item-msg">10:50</span>
+                              <span class="item-msg">10:55</span>
+                            </p>
+                          </div>
+                          <div class="main-right">
+                            <p class="right-item" onclick="handleEdit()">
+                              <img class="edit-btn edit" src="./images/edit_btn.png" alt="编辑">
+                              <span class="">SP</span>
+                            </p>
+                            <p class="right-item">张三李四</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content">
+                    <p class="header-text">考站1-1 内科 理论试题</p>
+                    <div class="content">
+                      <div class="nav">
+                        <a href="javascript:;" class='nav-item'>101</a>
+                        <a href="javascript:;" class='nav-item'>102</a>
+                      </div>
+                      <div class="content-container">
+                        <div class="content-item">
+                          <img class='edit-btn' src="./images/edit_btn.png" alt="编辑">
+                          <p class="item-text" onclick="showModal()">期末外科理论考试A卷</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content">
+                    <p class="header-text">考站1-1 内科 理论试题</p>
+                    <div class="content">
+                      <div class="nav">
+                        <a href="javascript:;" class='nav-item'>101</a>
+                        <a href="javascript:;" class='nav-item'>102</a>
+                      </div>
+                      <div class="content-container">
+                        <div class="content-item">
+                          <img class='edit-btn' src="./images/edit_btn.png" alt="编辑">
+                          <p class="item-text" onclick="showModal()">期末外科理论考试A卷</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                    <div class='header'>考场1</div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                      <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                </div>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                    <div class='header'>考场1</div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                      <div class="main-content">
+                        <p class="header-text">考站1-1 内科 理论试题</p>
+                        <div class="content">
+                          <div class="nav">
+                            <a href="javascript:;" class='nav-item'>101</a>
+                            <a href="javascript:;" class='nav-item'>102</a>
+                          </div>
+                          <div class="content-container"></div>
+                        </div>
+                      </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="time-line">
+                <p>下</p>
+                <p style="margin-top: 20px;">午</p>
+              </td>
+              <td>
+                <div class="main-wrapper">
+                  <div class='header'>考场1</div>
+                  <div class="main-content">
+                    <p class="header-text">考站1-1 内科 理论试题</p>
+                    <div class="content">
+                      <div class="nav">
+                        <a href="javascript:;" class='nav-item'>101</a>
+                        <a href="javascript:;" class='nav-item'>102</a>
+                      </div>
+                      <div class="content-container">
+                        <div class="content-item">
+                          <div class="tab1-content" id="tab1-main">
+                            <p class='item-main'>
+                              <span class="item-msg">S1</span>
+                              <span class="item-msg">09:40</span>
+                              <span class="item-msg">90:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S2</span>
+                              <span class="item-msg">09:50</span>
+                              <span class="item-msg">10:00</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S3</span>
+                              <span class="item-msg">10:05</span>
+                              <span class="item-msg">10:15</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S4</span>
+                              <span class="item-msg">10:20</span>
+                              <span class="item-msg">10:30</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S5</span>
+                              <span class="item-msg">10:35</span>
+                              <span class="item-msg">10:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S6</span>
+                              <span class="item-msg">10:50</span>
+                              <span class="item-msg">10:55</span>
+                            </p>
+                          </div>
+                          <div class="tab2-content" id="tab2-main">
+                            <p class='item-main'>
+                              <span class="item-msg">S7</span>
+                              <span class="item-msg">09:40</span>
+                              <span class="item-msg">09:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S8</span>
+                              <span class="item-msg">90:50</span>
+                              <span class="item-msg">10:00</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S9</span>
+                              <span class="item-msg">10:05</span>
+                              <span class="item-msg">10:15</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S10</span>
+                              <span class="item-msg">10:20</span>
+                              <span class="item-msg">10:30</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S11</span>
+                              <span class="item-msg">10:35</span>
+                              <span class="item-msg">10:45</span>
+                            </p>
+                            <p class='item-main'>
+                              <span class="item-msg">S12</span>
+                              <span class="item-msg">10:50</span>
+                              <span class="item-msg">10:55</span>
+                            </p>
+                          </div>
+                          <div class="main-right">
+                            <p class="right-item" onclick="handleEdit()">
+                              <img class="edit-btn edit" src="./images/edit_btn.png" alt="编辑">
+                              <span class="">考官</span>
+                            </p>
+                            <p class="right-item">张三</p>
+                            <p class="right-item">李四</p>
+                            <p class="right-item">王五</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                    <div class="main-content">
+                      <p class="header-text">考站1-1 内科 理论试题</p>
+                      <div class="content">
+                        <div class="nav">
+                          <a href="javascript:;" class='nav-item'>101</a>
+                          <a href="javascript:;" class='nav-item'>102</a>
+                        </div>
+                        <div class="content-container"></div>
+                      </div>
+                    </div>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <script src='./js/distribute.js'></script>
+      <script src="./js/preview.js"></script>
+  </body>
+</html>
